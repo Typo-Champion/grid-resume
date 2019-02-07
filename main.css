@@ -3,7 +3,7 @@
 
 #container {
     /* flex-grow: 0; */
-    flex-direction: column;
+    display: grid;
     justify-content: space-around;
     height: auto;
     width: 600px ;
