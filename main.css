@@ -1,10 +1,18 @@
 @media screen and (min-width: 600px) and (orientation: landscape) {
-    #container {
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 20px repeat(6, 100px) 20px;
+    #container  {
+        grid-column-end: span 3;
+        grid-template-columns: 1fr 1fr;
+       
+       
         
     }
-
+    header footer {
+     
+    }
+    
+    #avatar {
+        
+    }
 }
 
 
@@ -37,6 +45,6 @@ header footer {
 
 
 }
-#bio {
-    
+#navbar {
+    border: 1px solid black
 }
