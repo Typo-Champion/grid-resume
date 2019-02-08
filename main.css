@@ -5,7 +5,7 @@
 
 #container {
     display: grid;
-    background: rgb(143, 210, 210);
+    background: rgb(184, 192, 192);
     grid-template-columns: repeat(8, auto);
     grid-template-rows: repeat(8, auto);
     grid-template-areas: 
@@ -19,6 +19,24 @@
     "ft ft ft ft";
     border: 1px solid black;
 }
+
+#navbar {
+    display:grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-areas: 
+    "ni ni ni ni ni";
+    justify-self: stretch;
+    border: 1px solid black;
+    align-items: center;  
+    grid-area: nb;
+    background: rgb(77, 155, 155);
+}
+
+.navicon {
+    grid-area: ni;
+    justify-content: space-evely; 
+}
+
 #avatar {
     justify-self: center;
     padding: 10px;
@@ -28,8 +46,22 @@
 #contact {
     grid-area: ct;
 }
+
+#edu {
+    grid-area: ed;
+}
+
+#exp {
+    grid-area: ex;
+}
+
+#comp {
+    grid-area: cp;
+}
+
 section {
     border: solid 1px black;
+    text-align: center;
 }
 
 .heading {
@@ -50,28 +82,15 @@ header footer {
 
 
 }
-#navbar {
-    justify-self: center;
-    border: 1px solid black;
-    justify-content: space-evenly;  
-    grid-area: nb;
-}
+
 
 #contact {
     
 }
 
-#edu {
-    grid-area: ed;
-}
 
-#exp {
-    grid-area: ex;
-}
 
-#comp {
-    grid-area: cp;
-}
+
 
 #bio {
     grid-area: bi;
