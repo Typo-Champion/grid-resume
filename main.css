@@ -1,29 +1,29 @@
-@media screen and (min-width: 600px) and (orientation: landscape) {
-    #container  {
-        grid-column-end: span 3;
-        grid-template-columns: 1fr 1fr;
-       
-       
-        
-    }
-    header footer {
-     
-    }
-    
-    #avatar {
-        
-    }
-}
+ @media screen and (min-width: 600px) and (orientation: landscape) {
+
+ }
 
 
 #container {
     display: grid;
     background: rgb(143, 210, 210);
-    grid-template-rows: 20px repeat(6, auto) 20px;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: 
+    "nb nb nb nb"
+    "av av av av"
+    "ct ct ct ct"
+    "ed ed ed ed"
+    "ex ex ex ex"
+    "cp cp cp cp"
+    "bi bi bi bi"
+    "ft ft ft ft";
+
     border: 1px solid black;
 }
 #avatar {
     justify-self: center;
+    padding: 10px;
+    border: none
 }
 section {
     border: solid 1px black;
@@ -42,9 +42,45 @@ li {
 
 header footer {
     background: grey;
+    justify-self: center;
+    justify-content: space-evenly;  `
 
 
 }
 #navbar {
-    border: 1px solid black
+    justify-self: center;
+    border: 1px solid black;
+    justify-content: space-evenly;  
+}
+#navbar {
+    grid-area: nb;
+}
+
+#avatar {
+    grid-area: av;
+}
+
+#contact {
+    grid-area: ct;
+}
+
+#edu {
+    grid-area: ed;
+}
+
+#exp {
+    grid-area: ex;
+}
+
+#comp {
+    grid-area: cp;
+}
+
+#bio {
+    grid-area: bi;
+}
+
+#footer {
+    grid-area: ft;
+    justify-self: center
 }
