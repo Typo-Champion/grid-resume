@@ -17,7 +17,6 @@
     "cp cp cp cp"
     "bi bi bi bi"
     "ft ft ft ft";
-
     border: 1px solid black;
 }
 #avatar {
@@ -25,6 +24,9 @@
     padding: 10px;
     border: none;
     grid-area: av;
+}
+#contact {
+    grid-area: ct;
 }
 section {
     border: solid 1px black;
@@ -55,12 +57,8 @@ header footer {
     grid-area: nb;
 }
 
-#avatar {
-    
-}
-
 #contact {
-    grid-area: ct;
+    
 }
 
 #edu {
