@@ -23,7 +23,8 @@
 #avatar {
     justify-self: center;
     padding: 10px;
-    border: none
+    border: none;
+    grid-area: av;
 }
 section {
     border: solid 1px black;
@@ -43,7 +44,7 @@ li {
 header footer {
     background: grey;
     justify-self: center;
-    justify-content: space-evenly;  `
+    justify-content: space-evenly;  
 
 
 }
@@ -51,13 +52,11 @@ header footer {
     justify-self: center;
     border: 1px solid black;
     justify-content: space-evenly;  
-}
-#navbar {
     grid-area: nb;
 }
 
 #avatar {
-    grid-area: av;
+    
 }
 
 #contact {
