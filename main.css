@@ -97,11 +97,25 @@ header footer {
 
 #footer {
     grid-area: ft;
-    justify-self: center;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.ftc {
+    justify-self: auto;
+    justify-content: space-around;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "by ftc"; 
+    
     
 }
+
+#ftc {
+    display: grid;
+    grid-template-columns: repeat(5, 20px);
+    grid-area: ftc;
+    justify-content: space-between;
+    
+}
+
+.by {
+    grid-area: by;
+}
+
