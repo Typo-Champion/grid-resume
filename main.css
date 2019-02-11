@@ -1,5 +1,7 @@
 /* mobile view */
 #container {
+    height: 100vh;
+    width: 100vw;
     display: grid;
     border: 1px solid rgb(15, 4, 4);
     background: rgb(184, 192, 192);
@@ -22,7 +24,7 @@
     grid-template-columns: repeat(5, 100);
     grid-template-areas: "ni ni ni ni ni";
     justify-content: space-between; 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     align-items: center;  
     grid-area: nb;
     background: rgb(77, 155, 155);
@@ -31,7 +33,7 @@
 
 #avatar {
     justify-self: center;
-    padding: 10px;
+    /* padding: 10px; */
     border: none;
     grid-area: av;
 }
@@ -84,7 +86,7 @@
     margin: 0;
 }
 section {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     text-align: center;
 }
 li {
