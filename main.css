@@ -28,11 +28,6 @@
     padding: 10px;
 }
 
-.navicon { 
-    grid-area: ni;
-    align-items: center;
-} 
-
 #avatar {
     justify-self: center;
     padding: 10px;
@@ -53,28 +48,6 @@
 
 #comp {
     grid-area: cp;
-}
-
-section {
-    border: solid 1px black;
-    text-align: center;
-}
-
-.heading {
-    color: white;
-    background: rgb(77, 155, 155);
-    margin: 0;
-}
-
-li {
-    /* height: 50px; */
-    list-style: none;
-}
-
-header footer {
-    background: grey;
-    justify-self: center;
-    justify-content: space-evenly;  
 }
 
 #bio {
@@ -99,11 +72,34 @@ header footer {
     
 }
 
-.by {
-    grid-area: by;
+.navicon { 
+    grid-area: ni;
+    align-items: center;
+} 
+
+.heading {
+    color: white;
+    background: rgb(77, 155, 155);
+    margin: 0;
+}
+section {
+    border: solid 1px black;
+    text-align: center;
+}
+li {
+    /* height: 50px; */
+    list-style: none;
 }
 
-@media screen and (min-width: 600px) and (orientation: landscape) { 
+header footer {
+    background: grey;
+    justify-self: center;
+    justify-content: space-evenly;  
+}
+
+@media screen 
+and (min-width: 600px) 
+and (orientation: landscape) { 
     #container {
         grid-template-rows: auto;
         grid-template-columns: repeat(3, 200px);
@@ -117,3 +113,19 @@ header footer {
        }
 
 }
+
+@media screen 
+and (min-width: 601px) 
+and (max-width: 1024px)
+and (orientation: portrait) { 
+    #container {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-areas: 
+        "nb nb nb nb"
+        "av av ct ct"
+        "ex ex ed ed"
+        "ep ep cp cp"
+        "bi bi bi bi"
+        "ft ft ft ft"
+       }
