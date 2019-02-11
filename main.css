@@ -14,8 +14,7 @@
     "ex"
     "cp"
     "bi"
-    "ft";
-    
+    "ft";  
 }
 
 #navbar {
@@ -32,6 +31,10 @@
 #avatar {
     border: 1px solid black;
     grid-area: av;
+}
+
+#avatar img {
+    padding-top: 2px;
 }
 
 #contact {
