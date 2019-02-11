@@ -1,13 +1,33 @@
- /* @media screen and (min-width: 600px) and (orientation: landscape) {
+ @media screen and (min-width: 600px) and (orientation: landscape) {
+     #container {
+         display: grid;
+         grid-template-rows: repeat(2, 125px);
+         grid-template-columns: repeat(4, 125px);
+         grid-template-areas: 
+         "nb nb"
+         "c1 c1"
+         "c1 c2"
+         "cp cp"
+         "bi bi"
+         "ft ft"
+        }
 
- } */
+        #col-1 {
+            grid-area: c1;
+        }
+        
+        #col-2 {
+            grid-area: c2;
+        }
+     }
+ }
 
 
 #container {
     display: grid;
     background: rgb(184, 192, 192);
-    grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(8, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas: 
     "nb nb nb nb"
     "av av av av"
@@ -21,20 +41,20 @@
 }
 
 #navbar {
-    /* display:grid;
+    display:grid; 
     grid-template-columns: repeat(5, 100);
     grid-template-areas: "ni ni ni ni ni";
-    justify-content: space-between; */
+    justify-content: space-between; 
     border: 1px solid black;
     align-items: center;  
     grid-area: nb;
     background: rgb(77, 155, 155)
 }
 
-/* .navicon {
+.navicon { 
     grid-area: ni;
     align-items: center;
-} */
+} 
 
 #avatar {
     justify-self: center;
@@ -100,7 +120,7 @@ header footer {
     justify-self: auto;
     justify-content: space-around;
     display: grid; 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas: 
     "by ftc"; 
     
