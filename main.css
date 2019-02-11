@@ -1,43 +1,19 @@
- @media screen and (min-width: 600px) and (orientation: landscape) {
-     #container {
-         display: grid;
-         grid-template-rows: repeat(2, 125px);
-         grid-template-columns: repeat(4, 125px);
-         grid-template-areas: 
-         "nb nb"
-         "c1 c1"
-         "c1 c2"
-         "cp cp"
-         "bi bi"
-         "ft ft"
-        }
-
-        #col-1 {
-            grid-area: c1;
-        }
-        
-        #col-2 {
-            grid-area: c2;
-        }
-     }
- }
-
-
 #container {
     display: grid;
+    border: 1px solid rgb(15, 4, 4);
     background: rgb(184, 192, 192);
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1, auto;
+    grid-template-rows: repeat(8, auto);
     grid-template-areas: 
-    "nb nb nb nb"
-    "av av av av"
-    "ct ct ct ct"
-    "ed ed ed ed"
-    "ex ex ex ex"
-    "cp cp cp cp"
-    "bi bi bi bi"
-    "ft ft ft ft";
-    border: 1px solid black;
+    "nb"
+    "av"
+    "ct"
+    "ed"
+    "ex"
+    "cp"
+    "bi"
+    "ft";
+    
 }
 
 #navbar {
@@ -48,7 +24,8 @@
     border: 1px solid black;
     align-items: center;  
     grid-area: nb;
-    background: rgb(77, 155, 155)
+    background: rgb(77, 155, 155);
+    padding: 10px;
 }
 
 .navicon { 
@@ -98,18 +75,7 @@ header footer {
     background: grey;
     justify-self: center;
     justify-content: space-evenly;  
-
-
 }
-
-
-#contact {
-    
-}
-
-
-
-
 
 #bio {
     grid-area: bi;
@@ -122,9 +88,7 @@ header footer {
     display: grid; 
     grid-template-columns: 2fr 1fr;
     grid-template-areas: 
-    "by ftc"; 
-    
-    
+    "by ftc";     
 }
 
 #ftc {
@@ -139,3 +103,17 @@ header footer {
     grid-area: by;
 }
 
+@media screen and (min-width: 600px) and (orientation: landscape) { 
+    #container {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-areas: 
+        "nb nb nb nb"
+        "av ct ex ed"
+        "ep ep ep ep"
+        "cp cp cp cp"
+        "bi bi bi bi"
+        "ft ft ft ft"
+       }
+
+}
