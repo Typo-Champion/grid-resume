@@ -4,7 +4,6 @@
     width: 100vw;
     display: grid;
     border: 1px solid rgb(15, 4, 4);
-    background: rgb(184, 192, 192);
     grid-template-columns: 1, auto;
     grid-template-rows: repeat(8, auto);
     grid-template-areas: 
@@ -24,7 +23,6 @@
     grid-template-columns: repeat(5, 100);
     grid-template-areas: "ni ni ni ni ni";
     justify-content: space-between; 
-    /* border: 1px solid black; */
     align-items: center;  
     grid-area: nb;
     background: rgb(77, 155, 155);
@@ -32,11 +30,10 @@
 }
 
 #avatar {
-    justify-self: center;
-    /* padding: 10px; */
-    border: none;
+    border: 1px solid black;
     grid-area: av;
 }
+
 #contact {
     grid-area: ct;
 }
@@ -55,19 +52,24 @@
 
 #bio {
     grid-area: bi;
+    justify-self: auto;
 }
 
 #footer {
     grid-area: ft;
-    justify-self: auto;
-    justify-content: space-around;
+    justify-self: self-end;
+    justify-content: space-evenly;
+    padding-right: 10px;
     display: grid; 
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 
-    "by ftc";     
+    grid-template-rows: 1fr 1fr;
+   
 }
-
-#ftc {
+#by {
+    grid-area: by;
+    text-align: center;
+    margin: 0;
+}
+#fti {
     display: grid;
     grid-template-columns: repeat(5, 20px);
     grid-area: ftc;
@@ -84,35 +86,42 @@
     color: white;
     background: rgb(77, 155, 155);
     margin: 0;
+    
 }
 section {
-    /* border: solid 1px black; */
+    border: solid 1px black;
     text-align: center;
 }
+
 li {
+    padding: 5px;
     list-style: none;
+    font-size: 25px;
 }
 
 header footer {
     background: grey;
-    justify-self: center;
+    /* justify-self: center; */
     justify-content: space-evenly;  
 }
 
+/* desktop view */
 @media screen 
-and (min-width: 600px) 
+and (min-width: 1025px) 
 and (orientation: landscape) { 
     #container {
         grid-template-rows: auto;
-        grid-template-columns: repeat(3, 200px);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         "nb nb nb nb"
-        "av ct ex ed"
-        "ep ep ep ep"
-        "cp cp cp cp"
+        "av ct ct ex"
+        "cp cp ed ed"
         "bi bi bi bi"
-        "ft ft ft ft"
+        "ft ft ft ft";
        }
+    #navbar{
+        /* height: 5vh; */
+    }
 
 }
 /* tablet view */
@@ -127,7 +136,7 @@ and (orientation: portrait) {
         "nb nb nb nb"
         "av av ct ct"
         "ex ex ed ed"
-        "ep ep cp cp"
+        "cp cp cp cp"
         "bi bi bi bi"
         "ft ft ft ft"
        }
